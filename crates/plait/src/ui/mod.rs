@@ -1114,6 +1114,7 @@ impl Render for Plait {
                 this.show_project_settings(window, cx)
             }))
             .on_action(cx.listener(|this, _: &CheckForUpdates, window, cx| {
+                this.settings_tab = settings::SettingsTab::About;
                 this.show_settings(true, window, cx);
                 this.check_for_updates(false, cx);
             }))
